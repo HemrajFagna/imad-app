@@ -56,7 +56,7 @@ var htmlTemplate=`<html>
         </body>
 </html>
 `;
-
+ return htmlTemplate;
 }
 
 var app = express();
@@ -66,7 +66,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function(req,res) {
+app.get('/',function(req,res) {
     res.send(createTemplate(articleOne));
 });
 
