@@ -19,19 +19,19 @@ var articles={
     
 },
     articleTwo: { 
-    title:'Article One|Hemraj',
-    heading:'Article',
+    title:'Article Two|Hemraj',
+    heading:'Article Two',
     date:'Aug 9,2017',
     content:  `<p>
                     This is the content of article two.
                     </p>`
                     },
     articleThree: { 
-    title:'Article One|Hemraj',
-    heading:'Article',
+    title:'Article Three|Hemraj',
+    heading:'Article Three',
     date:'Aug 9,2017',
     content:  `<p>
-                    This is the content of article two.
+                    This is the content of article three.
         </p>`
     }
     
