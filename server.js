@@ -34,11 +34,8 @@ var articles={
                     This is the content of article three.
         </p>`
     }
-    
-    
 };
 
-  
   
 function  createTemplate(data) {
     title=data.title;
@@ -88,7 +85,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:articleName',function(req,res) {
-    var articleName=res.parans.articleName;
+    var articleName=req.parans.articleName;
     res.send(createTemplate(articles[articleName]));
 });
 
