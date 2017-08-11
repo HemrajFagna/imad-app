@@ -3,7 +3,7 @@ console.log('Loaded!');
 var element=document.getElementById('main-text');
 element.innerHTML="New Value";
 
-var img=document.getElementById('modi');
+var img=document.getElementById('madi');
 
 marginLeft=0;
 function moveRight() {
@@ -12,7 +12,7 @@ function moveRight() {
     
 }
 
-img.onclick= function() {
+img.onClick= function() {
     var interval=setInterval(moveRight,50);
     
 };
