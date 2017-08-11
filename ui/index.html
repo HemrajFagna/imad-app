@@ -6,6 +6,23 @@
     <body>
         <div  class="center">
             <img id='madi' src="/ui/madi.png" class="img-medium"/>
+            <script>
+            
+            var img=document.getElementById('madi');
+
+marginLeft=0;
+function moveRight() {
+    marginLeft=margiLeft+2;
+    img.style.marginLeft=marginLeft+'px';
+    
+}
+
+img.onClick= function() {
+    var interval=setInterval(moveRight,50);
+    
+};
+
+            </script>
            
         </div>
         <br>
