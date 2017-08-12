@@ -38,7 +38,7 @@ var articles={
 
   
 function  createTemplate(data) {
-    var title = data.title;
+    title = data.title;
     heading=data.heading;
     date=data.date;
     content=data.content;
@@ -84,10 +84,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-
+var ctr=0;
 app.get('/counter',function(req,res) {
-    counter = counter+1;
-    res.send(counter.toString());
+    ctr = ctr+1;
+    res.send(ctr.toString());
 });
 
 app.get('/:articleName',function(req,res) {
@@ -97,7 +97,7 @@ app.get('/:articleName',function(req,res) {
 
 
  
-var counter=0; 
+ 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
