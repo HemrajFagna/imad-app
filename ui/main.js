@@ -1,19 +1,22 @@
-console.log('Loaded!');
+var button= document.getElementById("counter");
 
-var element=document.getElementById('main-text');
-element.innerHTML="New Value";
-
-var img=document.getElementById('madi');
-
-marginLeft=0;
-function moveRight() {
-    marginLeft=margiLeft+2;
-    img.style.marginLeft=marginLeft.toString()+'px';
+button.onClick= function () {
+  
+  var request=new XMLHttpRequest();
+  request.onreadyStateChange=function() {
+      if(request.readyState==XMLHttpRequest.DONE) {
+          if(request.status==200) {
+              var counter = request.responseText;
+              var span= document.getElementById("count");
+              span.innerHTML=coounter.toString();
+          }
+      }
+  }
     
-}
-
-img.onClick= function() {
-    var interval=setInterval(moveRight,50);
+  
+  
     
 };
 
+request.open('GET','http://u15103352hemraj.imad.hasura-app.io/counter',true);
+request.send(null);
